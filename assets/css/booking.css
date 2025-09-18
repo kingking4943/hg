@@ -1,0 +1,1612 @@
+/**
+ * Colitalia Booking & Calendar Styles
+ * 
+ * @since 1.2.0
+ * @package Colitalia_Real_Estate
+ */
+
+/* =============================================================================
+   BOOKING FORM STYLES
+   ========================================================================== */
+
+.colitalia-booking-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.booking-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.property-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.property-image {
+    flex-shrink: 0;
+}
+
+.property-image img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.property-details h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.property-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.property-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Step Indicators */
+.booking-steps-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.booking-steps-indicator::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+    font-weight: 500;
+}
+
+.step.active .step-number {
+    background: #007bff;
+    color: white;
+}
+
+.step.active .step-label {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.step.completed .step-number {
+    background: #28a745;
+    color: white;
+}
+
+.step.completed .step-number::after {
+    content: '✓';
+}
+
+.step.completed .step-label {
+    color: #28a745;
+}
+
+/* Booking Steps */
+.booking-step {
+    display: none;
+}
+
+.booking-step.active {
+    display: block;
+}
+
+.step-content {
+    margin-bottom: 30px;
+}
+
+.step-content h4 {
+    margin: 0 0 25px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Booking Grid */
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Date Selection */
+.date-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.date-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-input-group label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.date-input-group input {
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.date-input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.mini-calendar-container {
+    margin-top: 10px;
+    min-height: 250px;
+}
+
+/* Guests Selection */
+.guests-input-group {
+    margin-bottom: 15px;
+}
+
+.guests-input-group label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.guests-counter {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.guests-counter button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.guests-counter button:hover {
+    background: #0056b3;
+}
+
+.guests-counter button:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.guests-counter input {
+    width: 60px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.guests-breakdown {
+    margin-top: 15px;
+}
+
+.guests-info {
+    margin-top: 10px;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Price Summary */
+.price-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.price-loading {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.price-details {
+    margin-bottom: 15px;
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.price-line:last-child {
+    border-bottom: none;
+}
+
+.price-line.total-line {
+    border-top: 2px solid #dee2e6;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 1.1rem;
+}
+
+.price-line.discount-line .price-value {
+    color: #28a745;
+}
+
+.price-note {
+    margin-top: 10px;
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+/* Availability Status */
+.availability-status {
+    margin-top: 15px;
+}
+
+.availability-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.availability-status.available .availability-check {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.availability-status.unavailable .availability-check {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.availability-status.checking .availability-check {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.availability-status.error .availability-check {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.availability-icon {
+    font-size: 1.2rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    border-color: #007bff;
+}
+
+.service-item.mandatory {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.service-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    flex: 1;
+}
+
+.service-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff;
+}
+
+.mandatory-label {
+    background: #ffc107;
+    color: #856404;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.service-price {
+    font-weight: 600;
+    color: #007bff;
+    white-space: nowrap;
+}
+
+.service-description {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-left: 28px;
+}
+
+/* Special Requests */
+.special-requests {
+    margin-bottom: 30px;
+}
+
+.special-requests h5 {
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.special-requests textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.special-requests textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Detailed Price Summary */
+.detailed-price-summary {
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.detailed-price-summary h5 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+.price-breakdown {
+    margin-bottom: 15px;
+}
+
+/* Customer Form */
+.customer-form {
+    margin-bottom: 30px;
+}
+
+.existing-customer {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #e8f4f8;
+    border-radius: 8px;
+}
+
+.existing-customer label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.existing-customer input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #b8daff;
+    border-radius: 6px;
+}
+
+.customer-search-results {
+    margin-top: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: white;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.customer-result {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.customer-result:hover {
+    background: #f8f9fa;
+}
+
+.customer-result:last-child {
+    border-bottom: none;
+}
+
+.customer-name {
+    font-weight: 600;
+    color: #495057;
+}
+
+.customer-details {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.customer-date {
+    font-size: 0.75rem;
+    color: #adb5bd;
+}
+
+.form-divider {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin: 15px 0;
+    position: relative;
+}
+
+.form-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #dee2e6;
+    z-index: 1;
+}
+
+.form-divider::after {
+    content: attr(data-text);
+    background: white;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.form-section h5 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Consent Groups */
+.consent-group {
+    margin-bottom: 15px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.consent-label input[type="checkbox"] {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff;
+    flex-shrink: 0;
+}
+
+.consent-text {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.consent-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.consent-text a:hover {
+    text-decoration: underline;
+}
+
+/* Booking Summary */
+.booking-summary {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.summary-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.summary-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.summary-section h5 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-row .label {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.summary-row .value {
+    font-weight: 600;
+    color: #495057;
+}
+
+.selected-services {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.selected-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 6px;
+}
+
+.no-services {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.final-price {
+    background: #e8f5e8;
+    border: 2px solid #28a745;
+}
+
+.total-final {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #28a745;
+    color: #155724;
+}
+
+/* Notes Section */
+.booking-notes {
+    margin-bottom: 30px;
+}
+
+.booking-notes h5 {
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.booking-notes textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+/* Terms Section */
+.terms-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+}
+
+/* Step Actions */
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #545b62;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+    background: #1e7e34;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+/* Loading Overlay */
+.booking-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e9ecef;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1.1rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Success Modal */
+.booking-success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+}
+
+.booking-code {
+    background: #e8f5e8;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* =============================================================================
+   CALENDAR WIDGET STYLES
+   ========================================================================== */
+
+.colitalia-calendar-widget {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.calendar-title h4 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.view-switcher {
+    display: flex;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.view-btn {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+    background: #e9ecef;
+}
+
+.view-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Calendar Container */
+.calendar-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.fullcalendar-widget {
+    min-height: 400px;
+}
+
+/* Calendar Legend */
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.legend-title {
+    font-weight: 600;
+    color: #495057;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.legend-color.available {
+    background: #28a745;
+}
+
+.legend-color.booked {
+    background: #dc3545;
+}
+
+.legend-color.blocked {
+    background: #6c757d;
+}
+
+.legend-color.maintenance {
+    background: #fd7e14;
+}
+
+.legend-color.checkin {
+    background: #007bff;
+}
+
+.legend-color.checkout {
+    background: #17a2b8;
+}
+
+/* Calendar States */
+.calendar-loading,
+.calendar-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e9ecef;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+.error-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.loading-text,
+.error-text {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.retry-calendar {
+    margin-top: 15px;
+}
+
+/* FullCalendar Customizations */
+.fc {
+    font-family: inherit;
+}
+
+.fc-event {
+    border-width: 2px !important;
+    font-weight: 500;
+}
+
+.fc-event.checkin-day {
+    border-left-width: 4px !important;
+}
+
+.fc-event.checkout-day {
+    border-right-width: 4px !important;
+}
+
+.fc-daygrid-event {
+    font-size: 0.8rem;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+.fc-button {
+    text-transform: none !important;
+    font-weight: 500 !important;
+}
+
+.fc-button-primary {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.fc-button-primary:hover {
+    background-color: #0056b3 !important;
+    border-color: #004085 !important;
+}
+
+/* Calendar Tooltip */
+.calendar-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #2c3e50;
+}
+
+.tooltip-date {
+    font-weight: 600;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.tooltip-status {
+    margin-bottom: 5px;
+}
+
+.tooltip-status.status-available {
+    color: #28a745;
+}
+
+.tooltip-status.status-booked {
+    color: #dc3545;
+}
+
+.tooltip-status.status-blocked {
+    color: #6c757d;
+}
+
+.tooltip-status.status-maintenance {
+    color: #fd7e14;
+}
+
+.tooltip-price {
+    color: #28a745;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tooltip-booking {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+/* Management Modal */
+.colitalia-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-lg {
+    width: 800px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #495057;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Management Tabs */
+.management-tabs {
+    display: flex;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #6c757d;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: #495057;
+    background: #f8f9fa;
+}
+
+.tab-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Seasons Management */
+.seasons-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.seasons-list {
+    margin-bottom: 20px;
+}
+
+.season-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.season-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.season-dates {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.season-price {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.season-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Form Styles in Modal */
+.modal-body .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-body .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .form-group label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.modal-body .form-group input,
+.modal-body .form-group select,
+.modal-body .form-group textarea {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.modal-body .form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .colitalia-booking-form-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .property-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .booking-steps-indicator {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .booking-steps-indicator::before {
+        display: none;
+    }
+    
+    .step-label {
+        font-size: 0.75rem;
+    }
+    
+    .date-inputs {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .step-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .step-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .calendar-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .view-switcher {
+        order: 1;
+    }
+    
+    .admin-controls {
+        order: 2;
+        justify-content: center;
+    }
+    
+    .legend-items {
+        justify-content: center;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+    }
+    
+    .modal-body .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .guests-breakdown {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .view-switcher {
+        width: 100%;
+    }
+    
+    .view-btn {
+        flex: 1;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .booking-steps-indicator,
+    .step-actions,
+    .calendar-controls,
+    .modal-backdrop,
+    .booking-loading {
+        display: none !important;
+    }
+    
+    .colitalia-booking-form-container,
+    .colitalia-calendar-widget {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .colitalia-booking-form-container,
+    .colitalia-calendar-widget {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    .form-section,
+    .price-summary,
+    .booking-summary {
+        background: #34495e;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: #34495e;
+        border-color: #4a5f7a;
+        color: #ecf0f1;
+    }
+    
+    .modal-content {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+}
+
+/* Accessibility Improvements */
+.btn:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.step[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .btn,
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        border-width: 2px;
+    }
+    
+    .fc-event {
+        border-width: 3px !important;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .loading-spinner {
+        animation: none;
+        border: 4px solid #007bff;
+    }
+}

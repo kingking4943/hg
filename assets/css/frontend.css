@@ -1,0 +1,772 @@
+/**
+ * Frontend CSS for Colitalia Real Estate Plugin
+ * 
+ * @package ColitaliaRealEstate
+ */
+
+/* Property Cards */
+.colitalia-properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.colitalia-property-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.colitalia-property-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.colitalia-property-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.colitalia-property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.colitalia-property-card:hover .colitalia-property-image img {
+    transform: scale(1.05);
+}
+
+.property-type-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #0073aa;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.property-price-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.colitalia-property-content {
+    padding: 20px;
+}
+
+.colitalia-property-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #23282d;
+}
+
+.colitalia-property-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.colitalia-property-title a:hover {
+    color: #0073aa;
+}
+
+.colitalia-property-location {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.colitalia-property-location::before {
+    content: '📍';
+    margin-right: 5px;
+}
+
+.colitalia-property-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.property-feature {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.property-feature::before {
+    font-size: 16px;
+}
+
+.property-feature.guests::before {
+    content: '👥';
+}
+
+.property-feature.bedrooms::before {
+    content: '🛏️';
+}
+
+.property-feature.bathrooms::before {
+    content: '🚿';
+}
+
+.property-feature.size::before {
+    content: '📐';
+}
+
+.colitalia-property-excerpt {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.colitalia-property-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colitalia-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.colitalia-btn-primary {
+    background: #0073aa;
+    color: white;
+}
+
+.colitalia-btn-primary:hover {
+    background: #005a87;
+    color: white;
+}
+
+.colitalia-btn-secondary {
+    background: transparent;
+    color: #0073aa;
+    border: 1px solid #0073aa;
+}
+
+.colitalia-btn-secondary:hover {
+    background: #0073aa;
+    color: white;
+}
+
+/* Property Single Page */
+.colitalia-property-single {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.colitalia-property-header {
+    margin-bottom: 30px;
+}
+
+.colitalia-property-single .colitalia-property-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.colitalia-property-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.property-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.colitalia-property-gallery {
+    margin-bottom: 30px;
+}
+
+.gallery-main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.gallery-thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.gallery-thumbnail:hover,
+.gallery-thumbnail.active {
+    border-color: #0073aa;
+}
+
+/* Booking Calendar */
+.colitalia-booking-calendar {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.calendar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar-nav button {
+    background: #f1f1f1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-nav button:hover {
+    background: #e1e1e1;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #e1e1e1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.calendar-day {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-day.available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.calendar-day.available:hover {
+    background: #c3e6cb;
+}
+
+.calendar-day.booked {
+    background: #f8d7da;
+    color: #721c24;
+    cursor: not-allowed;
+}
+
+.calendar-day.selected {
+    background: #0073aa;
+    color: white;
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+}
+
+/* Booking Form */
+.colitalia-booking-form {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.booking-form-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #23282d;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0073aa;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #dc3232;
+}
+
+.error-message {
+    color: #dc3232;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Search Form */
+.colitalia-search-form {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.search-form-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #23282d;
+}
+
+.search-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #23282d;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Loading States */
+.colitalia-loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.colitalia-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0073aa;
+    border-radius: 50%;
+    animation: colitalia-spin 1s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes colitalia-spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Messages */
+.colitalia-message {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.colitalia-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.colitalia-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.colitalia-message.warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.colitalia-message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .colitalia-properties-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .colitalia-property-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .colitalia-btn {
+        text-align: center;
+    }
+    
+    .search-filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .colitalia-property-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-thumbnails {
+        justify-content: center;
+    }
+    
+    .calendar-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .colitalia-property-single {
+        padding: 10px;
+    }
+    
+    .colitalia-booking-calendar,
+    .colitalia-booking-form,
+    .colitalia-search-form {
+        padding: 15px;
+    }
+    
+    .gallery-main-image {
+        height: 250px;
+    }
+    
+    .colitalia-property-single .colitalia-property-title {
+        font-size: 22px;
+    }
+}
+
+/* Accessibility */
+.colitalia-btn:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.calendar-day:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Print Styles */
+@media print {
+    .colitalia-booking-calendar,
+    .colitalia-booking-form,
+    .colitalia-search-form,
+    .colitalia-property-actions {
+        display: none;
+    }
+    
+    .colitalia-property-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+/* --- STILI PER LA NUOVA PAGINA SINGOLA PROPRIETÀ --- */
+
+/* Contenitore principale */
+.colitalia-single-property-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+}
+
+/* Layout a due colonne */
+.property-main-layout {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Colonna Galleria */
+.property-gallery-column .gallery-main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+.gallery-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+    border: 2px solid transparent;
+}
+.gallery-thumbnail:hover, .gallery-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border-color: #0073aa;
+}
+
+/* Colonna Dettagli */
+.property-details-column .property-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.property-location-meta {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+.property-price-box {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.property-price-box .price-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+}
+.property-price-box .price-amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+}
+.property-price-box .price-period {
+    font-size: 1rem;
+    color: #555;
+}
+.property-quick-info {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.property-quick-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+}
+.property-quick-info i {
+    color: #0073aa;
+}
+.property-excerpt {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Sezione Tabs */
+.property-full-details {
+    margin-top: 50px;
+}
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+}
+.tab-link {
+    padding: 15px 25px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+    position: relative;
+    transition: color 0.3s;
+}
+.tab-link.active {
+    color: #0073aa;
+    font-weight: 600;
+}
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0073aa;
+}
+.tab-content {
+    display: none;
+    padding: 30px 10px;
+    line-height: 1.7;
+}
+.tab-content.active {
+    display: block;
+}
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.features-list i {
+    color: #28a745;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .property-main-layout {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .property-details-column .property-title {
+        font-size: 2rem;
+    }
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}

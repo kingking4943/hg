@@ -1,0 +1,63 @@
+/*
+ * Stili per la Nuova Dashboard
+ */
+.colitalia-dashboard .dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.colitalia-dashboard .stat-card {
+    background-color: #fff;
+    border: 1px solid #e2e4e7;
+    border-left: 4px solid #0073aa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.colitalia-dashboard .stat-card:nth-child(2) { border-left-color: #3498db; }
+.colitalia-dashboard .stat-card:nth-child(3) { border-left-color: #2ecc71; }
+.colitalia-dashboard .stat-card:nth-child(4) { border-left-color: #f1c40f; }
+
+.colitalia-dashboard .stat-icon .dashicons {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: #50575e;
+}
+
+.colitalia-dashboard .stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.colitalia-dashboard .stat-number {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1d2327;
+}
+
+.colitalia-dashboard .stat-label {
+    font-size: 14px;
+    color: #50575e;
+}
+
+.booking-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.booking-status-badge.status-pending { background-color: #f1c40f; }
+.booking-status-badge.status-confirmed,
+.booking-status-badge.status-paid { background-color: #2ecc71; }
+.booking-status-badge.status-completed { background-color: #3498db; }
+.booking-status-badge.status-cancelled { background-color: #e74c3c; }

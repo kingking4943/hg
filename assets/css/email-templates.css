@@ -1,0 +1,661 @@
+/**
+ * Email Templates CSS
+ * Stili per template email responsive con supporto client email
+ */
+
+/* Reset e Base */
+.email-template * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.email-template {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+/* Container principale */
+.email-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+.email-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.email-header.success {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+}
+
+.email-header.reminder {
+    background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+}
+
+.email-header.cancellation {
+    background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+}
+
+.email-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 300;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.email-header .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.email-header p {
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* Content Area */
+.email-content {
+    padding: 40px 30px;
+}
+
+.greeting {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.email-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555555;
+}
+
+.email-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Card Components */
+.info-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.info-card.success {
+    background-color: #e8f5e8;
+    border-left-color: #28a745;
+}
+
+.info-card.warning {
+    background-color: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.info-card.danger {
+    background-color: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.info-card h2,
+.info-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Details Table */
+.details-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.details-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.details-table td:first-child {
+    font-weight: 600;
+    color: #6c757d;
+    width: 40%;
+    padding-right: 15px;
+}
+
+.details-table td:last-child {
+    color: #2c3e50;
+}
+
+.details-table .highlight {
+    background-color: #e3f2fd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-paid {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Price Summary */
+.price-summary {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.price-summary h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.price-row:last-child {
+    margin-bottom: 0;
+}
+
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+    border-top: 2px solid #28a745;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.price-paid {
+    color: #28a745;
+    border-top-color: #28a745;
+}
+
+/* Alert Boxes */
+.alert {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.alert h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff !important;
+    padding: 15px 30px;
+    text-decoration: none !important;
+    border-radius: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-button.success {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Countdown Timer */
+.countdown {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.countdown h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.countdown .days {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Lists */
+.email-content ul,
+.email-content ol {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.email-content li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.checklist li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Contact Information */
+.contact-info {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.contact-buttons {
+    margin-top: 15px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #2196f3;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1976d2;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.contact-button.phone {
+    background-color: #28a745;
+}
+
+.contact-button.phone:hover {
+    background-color: #1e7e34;
+}
+
+.contact-button.emergency {
+    background-color: #dc3545;
+}
+
+.contact-button.emergency:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+.email-footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.email-footer h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.email-footer p {
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.email-footer a {
+    color: #74b9ff !important;
+    text-decoration: none !important;
+}
+
+.email-footer a:hover {
+    color: #0984e3 !important;
+    text-decoration: underline !important;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 15px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+.footer-disclaimer {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .email-container {
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .email-content {
+        padding: 20px 15px;
+    }
+    
+    .email-header {
+        padding: 20px 15px;
+    }
+    
+    .email-header h1 {
+        font-size: 24px;
+    }
+    
+    .email-header .icon {
+        font-size: 36px;
+    }
+    
+    .details-table td {
+        display: block;
+        width: 100% !important;
+        padding: 8px 0;
+        border-bottom: none;
+    }
+    
+    .details-table td:first-child {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #6c757d;
+        font-weight: 600;
+        padding-right: 0;
+        margin-bottom: 2px;
+    }
+    
+    .details-table td:last-child {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .price-row {
+        font-size: 16px;
+    }
+    
+    .price-total {
+        font-size: 20px;
+    }
+    
+    .cta-button {
+        display: block;
+        margin: 20px 0;
+        padding: 18px 20px;
+        font-size: 18px;
+    }
+    
+    .countdown .days {
+        font-size: 36px;
+    }
+    
+    .contact-button {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .email-template {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .email-container {
+        background-color: #2d2d2d;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    .email-content {
+        color: #ffffff;
+    }
+    
+    .email-content p {
+        color: #e0e0e0;
+    }
+    
+    .details-table td:first-child {
+        color: #b0b0b0;
+    }
+    
+    .details-table td:last-child {
+        color: #ffffff;
+    }
+    
+    .info-card {
+        background-color: #3d3d3d;
+        color: #ffffff;
+    }
+    
+    .info-card h2,
+    .info-card h3 {
+        color: #ffffff;
+    }
+    
+    .price-summary {
+        background-color: #3d3d3d;
+        color: #ffffff;
+    }
+    
+    .price-summary h3 {
+        color: #ffffff;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .email-container {
+        box-shadow: none;
+        max-width: none;
+    }
+    
+    .email-header {
+        background: #667eea !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .cta-button {
+        background: #667eea !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .email-footer {
+        background: #2c3e50 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles for interactive elements */
+.cta-button:focus,
+.contact-button:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .email-header,
+    .cta-button,
+    .contact-button {
+        border: 2px solid currentColor;
+    }
+    
+    .info-card {
+        border: 2px solid #667eea;
+    }
+    
+    .alert {
+        border-width: 2px;
+    }
+}

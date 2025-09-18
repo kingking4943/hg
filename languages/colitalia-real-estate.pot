@@ -1,0 +1,509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Colitalia Real Estate Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: info@colitalia.com\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin name and description
+msgid "Colitalia Real Estate Manager"
+msgstr ""
+
+msgid "Plugin completo per la gestione immobiliare con multiproprietà, prenotazioni case vacanze, integrazione PayPal e email automation."
+msgstr ""
+
+# Post Type Labels
+msgid "Proprietà"
+msgstr ""
+
+msgid "Archivio Proprietà"
+msgstr ""
+
+msgid "Attributi Proprietà"
+msgstr ""
+
+msgid "Proprietà Padre:"
+msgstr ""
+
+msgid "Tutte le Proprietà"
+msgstr ""
+
+msgid "Aggiungi Nuova Proprietà"
+msgstr ""
+
+msgid "Aggiungi Nuova"
+msgstr ""
+
+msgid "Nuova Proprietà"
+msgstr ""
+
+msgid "Modifica Proprietà"
+msgstr ""
+
+msgid "Aggiorna Proprietà"
+msgstr ""
+
+msgid "Visualizza Proprietà"
+msgstr ""
+
+msgid "Cerca Proprietà"
+msgstr ""
+
+msgid "Nessuna proprietà trovata"
+msgstr ""
+
+msgid "Nessuna proprietà trovata nel cestino"
+msgstr ""
+
+msgid "Immagine in evidenza"
+msgstr ""
+
+msgid "Imposta immagine in evidenza"
+msgstr ""
+
+msgid "Rimuovi immagine in evidenza"
+msgstr ""
+
+msgid "Usa come immagine in evidenza"
+msgstr ""
+
+msgid "Inserisci nella proprietà"
+msgstr ""
+
+msgid "Caricato in questa proprietà"
+msgstr ""
+
+msgid "Lista proprietà"
+msgstr ""
+
+msgid "Navigazione lista proprietà"
+msgstr ""
+
+msgid "Filtra lista proprietà"
+msgstr ""
+
+# Taxonomy Labels
+msgid "Tipi Proprietà"
+msgstr ""
+
+msgid "Tipo Proprietà"
+msgstr ""
+
+msgid "Tutti i Tipi"
+msgstr ""
+
+msgid "Tipo Padre"
+msgstr ""
+
+msgid "Tipo Padre:"
+msgstr ""
+
+msgid "Nuovo Tipo Proprietà"
+msgstr ""
+
+msgid "Aggiungi Nuovo Tipo"
+msgstr ""
+
+msgid "Modifica Tipo"
+msgstr ""
+
+msgid "Aggiorna Tipo"
+msgstr ""
+
+msgid "Visualizza Tipo"
+msgstr ""
+
+msgid "Separa i tipi con virgole"
+msgstr ""
+
+msgid "Aggiungi o rimuovi tipi"
+msgstr ""
+
+msgid "Scegli tra i più usati"
+msgstr ""
+
+msgid "Tipi Popolari"
+msgstr ""
+
+msgid "Cerca Tipi"
+msgstr ""
+
+msgid "Nessun tipo trovato"
+msgstr ""
+
+msgid "Nessun tipo"
+msgstr ""
+
+msgid "Lista tipi"
+msgstr ""
+
+msgid "Navigazione lista tipi"
+msgstr ""
+
+# Default Terms
+msgid "Multiproprietà"
+msgstr ""
+
+msgid "Proprietà in regime di multiproprietà"
+msgstr ""
+
+msgid "Casa Vacanze"
+msgstr ""
+
+msgid "Proprietà per affitti brevi e vacanze"
+msgstr ""
+
+msgid "Vendita"
+msgstr ""
+
+msgid "Proprietà in vendita"
+msgstr ""
+
+msgid "Affitto Lungo Termine"
+msgstr ""
+
+msgid "Proprietà per affitti residenziali a lungo termine"
+msgstr ""
+
+# Meta Box Labels
+msgid "Dettagli Proprietà"
+msgstr ""
+
+msgid "Prezzi e Disponibilità"
+msgstr ""
+
+msgid "Posizione"
+msgstr ""
+
+msgid "Galleria Immagini"
+msgstr ""
+
+msgid "Numero massimo ospiti"
+msgstr ""
+
+msgid "Camere da letto"
+msgstr ""
+
+msgid "Bagni"
+msgstr ""
+
+msgid "Superficie (mq)"
+msgstr ""
+
+msgid "Descrizione dettagliata"
+msgstr ""
+
+msgid "Caratteristiche (una per riga)"
+msgstr ""
+
+msgid "Inserisci una caratteristica per riga. Es: WiFi gratuito, Aria condizionata, Parcheggio privato"
+msgstr ""
+
+msgid "Prezzo vendita (€)"
+msgstr ""
+
+msgid "Prezzo settimanale affitto (€)"
+msgstr ""
+
+msgid "Disponibile dal"
+msgstr ""
+
+msgid "Disponibile fino al"
+msgstr ""
+
+msgid "Multiproprietà"
+msgstr ""
+
+msgid "Questa proprietà è una multiproprietà"
+msgstr ""
+
+msgid "Indirizzo"
+msgstr ""
+
+msgid "Latitudine"
+msgstr ""
+
+msgid "Longitudine"
+msgstr ""
+
+msgid "Aggiungi Immagini"
+msgstr ""
+
+msgid "Scegli immagini per la galleria"
+msgstr ""
+
+msgid "Aggiungi alla galleria"
+msgstr ""
+
+msgid "Rimuovi immagine"
+msgstr ""
+
+# Taxonomy Custom Fields
+msgid "Colore"
+msgstr ""
+
+msgid "Colore per identificare questo tipo di proprietà."
+msgstr ""
+
+msgid "Prenotabile"
+msgstr ""
+
+msgid "Le proprietà di questo tipo possono essere prenotate."
+msgstr ""
+
+msgid "In vendita"
+msgstr ""
+
+msgid "Le proprietà di questo tipo sono in vendita."
+msgstr ""
+
+msgid "Richiede calcolo investimenti"
+msgstr ""
+
+msgid "Le proprietà di questo tipo richiedono calcoli di investimento."
+msgstr ""
+
+msgid "Commissione (%)"
+msgstr ""
+
+msgid "Percentuale di commissione per questo tipo di proprietà."
+msgstr ""
+
+msgid "Icona (Dashicon)"
+msgstr ""
+
+msgid "Nome della dashicon da utilizzare (es: dashicons-building)."
+msgstr ""
+
+msgid "Opzioni"
+msgstr ""
+
+msgid "Calcolo investimenti"
+msgstr ""
+
+# Admin Columns
+msgid "Tipo"
+msgstr ""
+
+msgid "Prezzo"
+msgstr ""
+
+msgid "Ospiti"
+msgstr ""
+
+msgid "ospiti"
+msgstr ""
+
+msgid "ospite"
+msgstr ""
+
+msgid "camere"
+msgstr ""
+
+msgid "camera"
+msgstr ""
+
+msgid "bagni"
+msgstr ""
+
+msgid "bagno"
+msgstr ""
+
+msgid "Proprietà"
+msgstr ""
+
+msgid "proprietà"
+msgstr ""
+
+# Frontend Template Strings
+msgid "Descrizione"
+msgstr ""
+
+msgid "Caratteristiche"
+msgstr ""
+
+msgid "Posizione"
+msgstr ""
+
+msgid "Mappa non disponibile"
+msgstr ""
+
+msgid "Prezzo di vendita"
+msgstr ""
+
+msgid "A partire da"
+msgstr ""
+
+msgid "Disponibile"
+msgstr ""
+
+msgid "Prenotato"
+msgstr ""
+
+msgid "Prenota ora"
+msgstr ""
+
+msgid "Check-in"
+msgstr ""
+
+msgid "Check-out"
+msgstr ""
+
+msgid "Numero ospiti"
+msgstr ""
+
+msgid "Servizi opzionali"
+msgstr ""
+
+msgid "Transfer aeroporto"
+msgstr ""
+
+msgid "Biancheria e asciugamani"
+msgstr ""
+
+msgid "Pulizia finale"
+msgstr ""
+
+msgid "I tuoi dati"
+msgstr ""
+
+msgid "Nome"
+msgstr ""
+
+msgid "Cognome"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Telefono"
+msgstr ""
+
+msgid "Seleziona le date per vedere il prezzo"
+msgstr ""
+
+msgid "Accetto la"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid "Hai domande?"
+msgstr ""
+
+msgid "Contattaci per maggiori informazioni su questa proprietà."
+msgstr ""
+
+msgid "WhatsApp"
+msgstr ""
+
+# Archive Template Strings
+msgid "Trova la proprietà ideale"
+msgstr ""
+
+msgid "Tutti i tipi"
+msgstr ""
+
+msgid "Inserisci città o zona"
+msgstr ""
+
+msgid "Prezzo min (€)"
+msgstr ""
+
+msgid "Prezzo max (€)"
+msgstr ""
+
+msgid "Qualsiasi"
+msgstr ""
+
+msgid "Cerca Proprietà"
+msgstr ""
+
+msgid "Pulisci Filtri"
+msgstr ""
+
+msgid "Mostrando %d-%d di %d proprietà"
+msgstr ""
+
+msgid "Nessuna proprietà trovata con i criteri selezionati."
+msgstr ""
+
+msgid "Vedi Dettagli"
+msgstr ""
+
+msgid "Prenota"
+msgstr ""
+
+msgid "Nessuna proprietà trovata"
+msgstr ""
+
+msgid "Prova a modificare i filtri di ricerca per trovare la proprietà che fa per te."
+msgstr ""
+
+msgid "&laquo; Precedente"
+msgstr ""
+
+msgid "Successivo &raquo;"
+msgstr ""
+
+msgid "Scopri la nostra selezione di proprietà per investimenti, vacanze e vendita."
+msgstr ""
+
+# JavaScript Strings
+msgid "Caricamento..."
+msgstr ""
+
+msgid "Si è verificato un errore"
+msgstr ""
+
+msgid "Nessun risultato trovato"
+msgstr ""
+
+msgid "Seleziona una data"
+msgstr ""
+
+msgid "Data non valida"
+msgstr ""
+
+msgid "Prenotazione completata con successo!"
+msgstr ""
+
+msgid "Errore durante la prenotazione"
+msgstr ""
+
+msgid "Sei sicuro di voler eliminare questo elemento?"
+msgstr ""
+
+msgid "Il campo %s deve contenere un numero valido"
+msgstr ""
+
+msgid "Inserisci un indirizzo email valido"
+msgstr ""
+
+msgid "Inserisci una data valida"
+msgstr ""
+
+msgid "Salvato"
+msgstr ""
+
+msgid "Errore"
+msgstr ""
+
+# Error Messages
+msgid "Colitalia Real Estate richiede WordPress %s o superiore."
+msgstr ""
+
+msgid "Colitalia Real Estate richiede PHP %s o superiore."
+msgstr ""
